@@ -14,7 +14,7 @@ R package for the **construction, simulation and validation of the continuous DE
 | RStudio | Recommended | Optional editor, free from [Posit](https://posit.co/download/rstudio-desktop/). |
 | `stats` package | Yes | Used by `rdeca()` (`runif`) and `chi2_deca()` (`pchisq`). **Ships with R**: nothing to install. |
 | `graphics` package | Only for the plotting examples | Used by `curve()` and `hist()`. **Ships with R**: nothing to install. |
-| `remotes` package | Yes, to install | Installs the package from GitHub: `install.packages("remotes")` |
+| `devtools` package | Yes, to install | Installs the package from GitHub: `install.packages("devtools")` |
 | Rtools (Windows) / Xcode (macOS) | **No** | The package contains only R code (no C/C++), so no compiler is needed. |
 | Other CRAN packages | **No** | The package has no other dependencies. |
 
@@ -23,8 +23,8 @@ R package for the **construction, simulation and validation of the continuous DE
 Run these two lines in the R console:
 
 ```r
-install.packages("remotes")                    # only once
-remotes::install_github("urquizodeysi123/distDECA")
+install.packages("devtools")                     # only once
+devtools::install_github("urquizodeysi123/distDECA")
 ```
 
 **Check that it works:**
@@ -119,7 +119,7 @@ data.frame(O = test$O, E = round(test$E, 2))       # observed vs. expected
 | Message | Cause | Solution |
 |---|---|---|
 | `there is no package called 'distDECA'` | The package is not installed | Run the installation commands above. |
-| `there is no package called 'remotes'` | `remotes` is missing | `install.packages("remotes")` |
+| `there is no package called 'devtools'` | `devtools` is missing | `install.packages("devtools")` |
 | `Permission denied` / `cannot remove prior installation` | An older version is loaded, or the folder is synchronised by OneDrive | *Session → Restart R* and install again; if it persists, move the folder outside OneDrive. |
 | `x must be in [0, 1]` | The sample passed to `chi2_deca()` has values outside $[0,1]$ | Use a sample generated with `rdeca()` or check your data. |
 | `k must be an integer >= 2` | `k` in `chi2_deca()` is a decimal or smaller than 2 | Use an integer such as `k = 10`. |
