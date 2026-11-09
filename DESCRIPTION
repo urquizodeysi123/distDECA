@@ -1,0 +1,20 @@
+Package: distDECA
+Type: Package
+Title: The DECA Distribution: Construction, Simulation and Validation
+Version: 1.0.0
+Authors@R: c(
+    person("Karina", "Manya", role = c("aut")),
+    person("Angie", "Garzon", role = c("aut")),
+    person("Deisy", "Urquizo", role = c("aut", "cre"), email = "daysi.urquizo@espoch.edu.ec"),
+    person("Christian", "Herrera", role = c("aut")))
+Description: Implements the continuous DECA distribution on [0,1], with
+    density f(x) = 2x exp(x^2)/(e - 1): density, cumulative distribution
+    function, random generation by the inverse transform method and a
+    chi-square goodness-of-fit test.
+License: MIT + file LICENSE
+Language: en-US
+Encoding: UTF-8
+Depends: R (>= 4.0.0)
+Imports: stats
+Suggests: graphics
+RoxygenNote: 7.3.2
